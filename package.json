@@ -1,0 +1,13 @@
+{
+    "name": "elastic-types",
+    "version": "0.1.0",
+    "author": {
+        "name": "Dominik Decker",
+        "email": "dominik.decker97@gmail.com"
+    },
+    "devDependencies": {
+        "tslint": "^5.20.0",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^3.6.3"
+    }
+}

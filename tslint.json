@@ -1,0 +1,21 @@
+{
+    "defaultSeverity": "error",
+    "extends": ["tslint:recommended", "tslint-config-prettier"],
+    "rules": {
+        "member-access": false,
+        "array-type": false,
+        "no-console": [true, "warn"],
+        "no-bitwise": false,
+        "indent": [true, "spaces", 4],
+        "linebreak-style": false,
+        "quotemark": [true, "single", "avoid-escape"],
+        "semicolon": [true, "always"],
+        "no-fallthrough": ["off"],
+        "interface-name": [true, "never-prefix"],
+        "object-literal-sort-keys": false,
+        "prefer-for-of": false,
+        "ordered-imports": false,
+        "no-empty": false,
+        "member-ordering": false
+    }
+}
