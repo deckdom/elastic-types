@@ -1,9 +1,20 @@
 {
     "name": "elastic-types",
     "version": "0.1.0",
+    "description": "TypeScipt types for ElasticSearch",
+    "license": "MIT",
+    "keywords": [
+        "typescript",
+        "typings",
+        "elasticsearch"
+    ],
     "author": {
         "name": "Dominik Decker",
         "email": "dominik.decker97@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sinexist/es-types"
     },
     "devDependencies": {
         "tslint": "^5.20.0",
