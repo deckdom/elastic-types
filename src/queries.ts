@@ -19,6 +19,7 @@ import { MatchBooleanPrefixQuery } from './queries/match-bool-prefix';
 import { MatchNoneQuery } from './queries/match-none';
 import { MatchPhraseQuery } from './queries/match-phrase';
 import { MatchPhrasePrefixQuery } from './queries/match-phrase-prefix';
+import { MoreLikeThisQuery } from './queries/more-like-this';
 import { MultiMatchQuery } from './queries/multi-match';
 import { NestedQuery } from './queries/nested';
 import { ParentIDQuery } from './queries/parent-id';
@@ -26,12 +27,20 @@ import { PrefixQuery } from './queries/prefix';
 import { QueryStringQuery } from './queries/query-string';
 import { RangeQuery } from './queries/range';
 import { RegexpQuery } from './queries/regexp';
+import { ScriptQuery } from './queries/script';
+import { ScriptScoreQuery } from './queries/script-score';
 import { SimpleQueryStringQuery } from './queries/simple-query-string';
+import { SpanContainingQuery } from './queries/span-containing';
+import { SpanMultiQuery } from './queries/span-multi';
+import { SpanNearQuery } from './queries/span-near';
+import { SpanTermQuery } from './queries/span-term';
+import { SpanWithinQuery } from './queries/span-within';
 import { TermQuery } from './queries/term';
 import { TermsQuery } from './queries/terms';
 import { TermsSetQuery } from './queries/terms-set';
 import { TypeQuery } from './queries/type';
 import { WildcardQuery } from './queries/wildcard';
+import { WrapperQuery } from './queries/wrapper';
 
 export type CompoundQuery =
     | BoolQuery
@@ -57,6 +66,7 @@ export type LeafQuery =
     | MatchPhrasePrefixQuery
     | MatchPhraseQuery
     | MatchQuery
+    | MoreLikeThisQuery
     | MultiMatchQuery
     | NestedQuery
     | ParentIDQuery
@@ -64,12 +74,20 @@ export type LeafQuery =
     | QueryStringQuery
     | RangeQuery
     | RegexpQuery
+    | ScriptScoreQuery
+    | ScriptQuery
     | SimpleQueryStringQuery
+    | SpanContainingQuery
+    | SpanMultiQuery
+    | SpanNearQuery
+    | SpanTermQuery
+    | SpanWithinQuery
     | TermQuery
     | TermsSetQuery
     | TermsQuery
     | TypeQuery
     | WildcardQuery
+    | WrapperQuery
     ;
 
 export type SearchQuery = CompoundQuery | LeafQuery;

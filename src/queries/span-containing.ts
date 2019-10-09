@@ -1,3 +1,4 @@
+import { SpanMultiQuery } from './span-multi';
 import { SpanNearQuery } from './span-near';
 import { SpanTermQuery } from './span-term';
 
@@ -6,6 +7,6 @@ export interface SpanContainingQuery {
 }
 
 export interface SpanContainingQueryOptions {
-    little: SpanTermQuery | SpanNearQuery;
-    big: SpanTermQuery | SpanNearQuery;
+    little: SpanTermQuery | SpanNearQuery | SpanMultiQuery;
+    big: SpanTermQuery | SpanNearQuery | SpanMultiQuery;
 }

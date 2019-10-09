@@ -1,3 +1,5 @@
+import { SpanMultiQuery } from './span-multi';
+import { SpanNearQuery } from './span-near';
 import { SpanTermQuery } from './span-term';
 
 export interface SpanFirstQuery {
@@ -5,6 +7,6 @@ export interface SpanFirstQuery {
 }
 
 export interface SpanFirstQueryOptions {
-    match: SpanTermQuery;
+    match: SpanTermQuery | SpanMultiQuery | SpanNearQuery;
     end: number;
 }
