@@ -1,3 +1,7 @@
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fsinexist%2Felastic-types%2Fbadge%3Fref%3Dmaster&style=for-the-badge)](https://actions-badge.atrox.dev/sinexist/elastic-types/goto?ref=master)
+[![Release Version](https://img.shields.io/github/release/sinexist/elastic-types.svg?style=for-the-badge)](https://github.com/sinexist/elastic-types/releases)
+[![License](https://img.shields.io/github/license/sinexist/elastic-types.svg?style=for-the-badge)](https://github.com/sinexist/elastic-types/blob/master/LICENSE)
+
 # ElasticSearch Types
 
 TypeScript Typings for all Queries, Aggregations, Requests and Responses

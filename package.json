@@ -34,6 +34,7 @@
     "files": [
         "./**/*.d.ts",
         "CHANGELOG.md",
+        "LICENSE",
         "README.md",
         "package.json"
     ]
