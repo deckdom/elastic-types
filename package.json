@@ -2,7 +2,7 @@
     "name": "elastic-types",
     "version": "0.1.0",
     "description": "TypeScipt types for ElasticSearch",
-    "homepage": "https://github.com/sinexist/es-types",
+    "homepage": "https://github.com/sinexist/elastic-types",
     "license": "MIT",
     "keywords": [
         "typescript",
@@ -15,10 +15,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/sinexist/es-types"
+        "url": "https://github.com/sinexist/elastic-types"
     },
     "bugs": {
-        "url": "https://github.com/sinexist/es-types/issues"
+        "url": "https://github.com/sinexist/elastic-types/issues"
     },
     "main": "./dist/index.js",
     "scripts": {
