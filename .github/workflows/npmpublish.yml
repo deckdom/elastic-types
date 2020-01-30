@@ -1,0 +1,65 @@
+name: Node.js Package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Cache
+        uses: actions/cache@v1.1.0
+        with:
+          # A directory to store and save the cache
+          path: node_modules 
+          # An explicit key for restoring and saving the cache
+          key: ${{ hashFiles('**/yarn.lock') }}
+      - run: yarn ci
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - name: Cache
+        uses: actions/cache@v1.1.0
+        with:
+          # A directory to store and save the cache
+          path: node_modules 
+          # An explicit key for restoring and saving the cache
+          key: ${{ hashFiles('**/yarn.lock') }}
+      - run: yarn ci
+      - run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          scope: '@sinexist'
+      - name: Cache
+        uses: actions/cache@v1.1.0
+        with:
+          # A directory to store and save the cache
+          path: node_modules 
+          # An explicit key for restoring and saving the cache
+          key: ${{ hashFiles('**/yarn.lock') }}
+      - run: yarn ci
+      - run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
