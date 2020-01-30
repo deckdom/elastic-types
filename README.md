@@ -15,7 +15,7 @@ yarn add -D elastic-types
 Then import the Types you need and easily stick your queries together!
 
 ```typescript
-import { TermQuery } from 'elastic-types';
+import { TermQuery } from 'elastic-types/queries';
 
 const validQuery: TermQuery = {
     term: {

@@ -1,6 +1,6 @@
 {
     "name": "elastic-types",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "TypeScipt types for ElasticSearch",
     "homepage": "https://github.com/sinexist/elastic-types",
     "license": "MIT",
@@ -20,7 +20,8 @@
     "bugs": {
         "url": "https://github.com/sinexist/elastic-types/issues"
     },
-    "main": "./dist/index.js",
+    "main": "",
+    "typings": "./index.d.ts",
     "scripts": {
         "ci": "tsc",
         "build": "tsc"
@@ -29,5 +30,11 @@
         "tslint": "^5.20.0",
         "tslint-config-prettier": "^1.18.0",
         "typescript": "^3.6.3"
-    }
+    },
+    "files": [
+        "./**/*.d.ts",
+        "CHANGELOG.md",
+        "README.md",
+        "package.json"
+    ]
 }
