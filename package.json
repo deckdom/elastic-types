@@ -1,6 +1,6 @@
 {
     "name": "elastic-types",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "TypeScipt types for ElasticSearch",
     "homepage": "https://github.com/sinexist/elastic-types",
     "license": "MIT",
@@ -32,7 +32,7 @@
         "typescript": "^3.6.3"
     },
     "files": [
-        "./**/*.d.ts",
+        "**/*.d.ts",
         "CHANGELOG.md",
         "LICENSE",
         "README.md",
