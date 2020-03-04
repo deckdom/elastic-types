@@ -1,5 +1,4 @@
 import { BoostOption } from '../options';
-import { TermQueryOptions } from './term';
 
 /**
  * Returns documents that contain one or more exact terms in a provided field.
@@ -9,7 +8,7 @@ import { TermQueryOptions } from './term';
  * @see https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-terms-query.html
  */
 export interface TermsQuery {
-    terms: TermQueryOptions & {
+    terms: BoostOption & {
         /**
          * Field you wish to search.
          * 
