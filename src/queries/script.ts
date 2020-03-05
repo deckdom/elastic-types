@@ -1,4 +1,4 @@
-import { InlineScriptObject, StoredScriptObject } from './common';
+import { InlineScriptObject, StoredScriptObject } from '../scripts';
 
 /**
  * Filters documents based on a provided script.
