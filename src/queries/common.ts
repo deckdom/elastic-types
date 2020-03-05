@@ -1,4 +1,4 @@
-import { AnalyzerOption, MinimumShouldMatchOption } from '../options';
+import { AnalyzerOption, MinimumShouldMatchOption } from './options';
 
 export interface BasicMatchOptions extends AnalyzerOption, MinimumShouldMatchOption {
     /**

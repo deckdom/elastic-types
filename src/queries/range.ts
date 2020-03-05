@@ -1,4 +1,4 @@
-import { BoostOption, FormatOption, TimeZoneOption } from '../options';
+import { BoostOption, FormatOption, TimeZoneOption } from './options';
 
 /**
  * Returns documents that contain terms within a provided range.

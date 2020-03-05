@@ -1,4 +1,4 @@
-import { BoostOption } from '../options';
+import { BoostOption } from './options';
 
 /**
  * Boosts the relevance score of documents closer to a provided `origin` date or point.

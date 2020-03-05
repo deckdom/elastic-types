@@ -1,4 +1,4 @@
-import { FuzzynessOptions, RewriteOption } from '../options';
+import { FuzzynessOptions, RewriteOption } from './options';
 
 /**
  * Returns documents that contain terms similar to the search term, as measured by a Levenshtein edit distance.

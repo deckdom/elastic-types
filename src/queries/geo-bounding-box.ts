@@ -1,5 +1,5 @@
-import { IgnoreUnmappedOption } from '../options';
-import { GeoVertex, ValidationMethodOption } from '../geo';
+import { IgnoreUnmappedOption } from './options';
+import { GeoVertex, ValidationMethodOption } from '../common/geo';
 
 /**
  * A query allowing to filter hits based on a point location using a bounding box.

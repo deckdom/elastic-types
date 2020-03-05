@@ -1,5 +1,5 @@
-import { IgnoreUnmappedOption } from '../options';
-import { GeoVertex, ValidationMethodOption } from '../geo';
+import { IgnoreUnmappedOption } from './options';
+import { GeoVertex, ValidationMethodOption } from '../common/geo';
 
 /**
  * A query returning hits that only fall within a polygon of points.

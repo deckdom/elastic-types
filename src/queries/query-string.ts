@@ -1,4 +1,4 @@
-import { BoostOption, RewriteOption, TimeZoneOption } from '../options';
+import { BoostOption, RewriteOption, TimeZoneOption } from './options';
 import { BasicQueryStringOptions } from './common';
 
 /**

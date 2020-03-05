@@ -1,4 +1,4 @@
-import { BoostOption } from '../options';
+import { BoostOption } from './options';
 
 /**
  * The most simple query, which matches all documents, giving them all a `_score` of `1.0`.

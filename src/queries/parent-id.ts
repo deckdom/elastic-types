@@ -1,4 +1,4 @@
-import { IgnoreUnmappedOption } from '../options';
+import { IgnoreUnmappedOption } from './options';
 
 /**
  * Returns child documents joined to a specific parent document.
