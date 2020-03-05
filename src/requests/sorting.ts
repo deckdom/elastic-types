@@ -1,6 +1,6 @@
 import { SearchQuery } from '../queries';
 import { GeoPosition } from '../common/geo';
-import { InlineScriptObject, StoredScriptObject } from '../scripts';
+import { InlineScriptObject, StoredScriptObject } from '../common/scripts';
 
 export interface NestedSortingOption {
     /**
