@@ -1,4 +1,4 @@
-import { FuzzynessOptions } from '../options';
+import { FuzzynessOptions } from './options';
 import { BasicMatchOptions, MatchOperatorOption } from './common';
 
 /**

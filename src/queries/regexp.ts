@@ -1,4 +1,4 @@
-import { RewriteOption } from '../options';
+import { RewriteOption } from './options';
 
 /**
  * Returns documents that contain terms matching a regular expression.

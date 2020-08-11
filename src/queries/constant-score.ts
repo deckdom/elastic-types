@@ -1,4 +1,4 @@
-import { BoostOption } from '../options';
+import { BoostOption } from './options';
 import { SearchQuery } from '../queries';
 
 /**

@@ -1,4 +1,4 @@
-import { IgnoreUnmappedOption } from '../options';
+import { IgnoreUnmappedOption } from './options';
 import { SearchQuery } from '../queries';
 
 /**

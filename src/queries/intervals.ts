@@ -1,4 +1,4 @@
-import { ScriptOptions } from '../options';
+import { ScriptOptions } from './options';
 import { SearchQuery } from '../queries';
 
 /**

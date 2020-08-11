@@ -1,4 +1,4 @@
-import { BoostOption } from '../options';
+import { BoostOption } from './options';
 
 /**
  * Returns documents that contain one or more exact terms in a provided field.

@@ -1,5 +1,5 @@
-import { IgnoreUnmappedOption } from '../options';
-import { GeoShapeType, GeoVertex } from '../geo';
+import { IgnoreUnmappedOption } from './options';
+import { GeoShapeType, GeoVertex } from '../common/geo';
 
 /**
  * 

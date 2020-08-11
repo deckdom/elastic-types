@@ -1,5 +1,5 @@
-import { IgnoreUnmappedOption } from '../options';
-import { GeoVertex, ValidationMethodOption } from '../geo';
+import { IgnoreUnmappedOption } from './options';
+import { GeoVertex, ValidationMethodOption } from '../common/geo';
 
 /**
  * Filters documents that include only hits that exists within a specific distance from a geo point.

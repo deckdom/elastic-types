@@ -1,4 +1,4 @@
-import { BoostOption, RewriteOption } from '../options';
+import { BoostOption, RewriteOption } from './options';
 
 /**
  * Returns documents that contain terms matching a wildcard pattern.

@@ -1,4 +1,4 @@
-import { BoostOption, ScriptOptions } from '../options';
+import { BoostOption, ScriptOptions } from './options';
 
 /**
  * Returns documents that contain a minimum number of exact terms in a provided field.

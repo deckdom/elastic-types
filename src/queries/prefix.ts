@@ -1,4 +1,4 @@
-import { RewriteOption } from '../options';
+import { RewriteOption } from './options';
 
 /**
  * Returns documents that contain a specific prefix in a provided field.

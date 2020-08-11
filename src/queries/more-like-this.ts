@@ -1,4 +1,4 @@
-import { BoostOption, MinimumShouldMatchOption } from '../options';
+import { BoostOption, MinimumShouldMatchOption } from './options';
 
 /**
  * The More Like This Query finds documents that are "like" a given set of documents.

@@ -1,5 +1,5 @@
 import { SearchQuery } from '../queries';
-import { MinimumShouldMatchOption, BoostOption } from '../options';
+import { MinimumShouldMatchOption, BoostOption } from './options';
 
 /**
  * A query that matches documents matching boolean combinations of other queries.
