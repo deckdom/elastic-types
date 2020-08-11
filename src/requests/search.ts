@@ -1,5 +1,10 @@
-import { SortingOption } from './sorting';
+import { InlineScriptObject } from 'src/common/scripts';
+
 import { SearchQuery } from '../queries';
+import { Collapse } from './collapse';
+import { Highlight } from './highlight';
+import { Rescore } from './rescore';
+import { SortingOption } from './sorting';
 
 interface SharedSearchRequestOptions {
     /**
@@ -55,11 +60,6 @@ interface SharedSearchRequestOptions {
      * is given in the query string.
      */
     df?: string;
-    /**
-     * A comma-separated list of fields to return as the docvalue
-     * representation of a field for each hit. 
-     */
-    docvalue_fields?: string;
     /**
      * Controls what kind of indices that wildcard expressions can expand to.
      * Valid values are:
@@ -173,19 +173,6 @@ interface SharedSearchRequestOptions {
      */
     size?: number;
     /**
-     * `true` or `false` to return the `_source` field or not,
-     * or a list of fields to return. 
-     */
-    _source?: boolean | string[];
-    /**
-     * A list of fields to exclude from the returned `_source` field.
-     */
-    _source_excludes?: string[];
-    /**
-     * A list of fields to extract and return from the `_source` field.
-     */
-    _source_includes?: string[];
-    /**
      * Specific `tag` of the request for logging and statistical purposes.
      */
     stats?: string;
@@ -260,9 +247,27 @@ export interface SearchRequestParameters extends SharedSearchRequestOptions {
      */
     sort?: string;
     /**
+     * `true` or `false` to return the `_source` field or not,
+     * or a list of fields to return. 
+     */
+    _source?: boolean | string[];
+    /**
+ * A list of fields to exclude from the returned `_source` field.
+ */
+    _source_excludes?: string[];
+    /**
+     * A list of fields to extract and return from the `_source` field.
+     */
+    _source_includes?: string[];
+    /**
      * @see https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-body.html#request-body-search-scroll
      */
     scroll?: string;
+    /**
+     * A comma-separated list of fields to return as the docvalue
+     * representation of a field for each hit. 
+     */
+    docvalue_fields?: string;
 }
 
 /**
@@ -271,6 +276,15 @@ export interface SearchRequestParameters extends SharedSearchRequestOptions {
  * @see https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html
  */
 export interface SearchRequestBody extends SharedSearchRequestOptions {
+    /**
+     * Array of wildcard (*) patterns.
+     * The request returns doc values for field names matching these patterns
+     * in the `hits.fields` property of the response.
+     * 
+     * You can specify items in the array as a string or object.
+     * See Doc value fields.
+     */
+    docvalue_fields?: (string | { field: string, format?: string })[];
     /**
      * Enables explanation for each hit on how its score was computed.
      */
@@ -289,15 +303,33 @@ export interface SearchRequestBody extends SharedSearchRequestOptions {
      * option.
      */
     sort?: string | SortingOption | (string | SortingOption)[];
-    // TODO: To be typed
-    docvalue_fields?: any;
-    collapse?: any;
-    highlight?: any;
-    rescore?: any;
-    indicies_boost?: any;
+    /**
+     * `true` or `false` to return the `_source` field or not,
+     * or a list of fields to return. 
+     */
+    _source?: boolean | string[] | {
+        excludes?: string | string[];
+        includes?: string | string[];
+    };
+    collapse?: Collapse;
+    highlight?: Highlight;
+    rescore?: Rescore | Rescore[];
+    indicies_boost?: IndexBoost | IndexBoost[];
     aggs?: any;
-    post_filter?: any;
-    script_fields?: any;
-    slice?: any;
-    search_after?: any;
+    post_filter?: SearchQuery;
+    script_fields?: {
+        [key: string]: {
+            script: InlineScriptObject;
+        };
+    };
+    slice?: {
+        field?: string;
+        id: number;
+        max: number;
+    };
+    search_after?: (string | number)[];
+}
+
+export interface IndexBoost {
+    [key: string]: number;
 }

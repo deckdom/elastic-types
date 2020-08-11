@@ -1,5 +1,6 @@
+import { InlineScriptObject, StoredScriptObject } from '../common/scripts';
 import { SearchQuery } from '../queries';
-import { InlineScriptObject, StoredScriptObject } from './common';
+
 /**
  * Uses a script to provide a custom score for returned documents.
  * The script_score query is useful if, for example,
