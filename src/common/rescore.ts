@@ -1,4 +1,4 @@
-import { SearchQuery } from "src/queries";
+import { SearchQuery } from '../queries';
 
 export interface Rescore {
     window_size?: number;

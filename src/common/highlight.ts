@@ -1,4 +1,4 @@
-import { SearchQuery } from "src/queries";
+import { SearchQuery } from '../queries';
 
 /**
  * Highlighters enable you to get highlighted snippets from one or more fields

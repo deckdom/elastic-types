@@ -140,4 +140,3 @@ export type LeafQuery =
     ;
 
 export type SearchQuery = CompoundQuery | LeafQuery;
-

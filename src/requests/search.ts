@@ -1,10 +1,9 @@
-import { InlineScriptObject } from 'src/common/scripts';
-
+import { Collapse } from '../common/collapse';
+import { Highlight } from '../common/highlight';
+import { Rescore } from '../common/rescore';
+import { InlineScriptObject } from '../common/scripts';
+import { SortingOption } from '../common/sorting';
 import { SearchQuery } from '../queries';
-import { Collapse } from './collapse';
-import { Highlight } from './highlight';
-import { Rescore } from './rescore';
-import { SortingOption } from './sorting';
 
 interface SharedSearchRequestOptions {
     /**

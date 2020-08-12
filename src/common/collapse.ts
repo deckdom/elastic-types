@@ -1,4 +1,4 @@
-import { SortingOption } from "./sorting";
+import { SortingOption } from './sorting';
 
 export interface Collapse {
     field: string;
@@ -9,6 +9,6 @@ export interface Collapse {
 export interface InnerHit {
     name: string;
     size: number;
-    collapse?:  Collapse;
+    collapse?: Collapse;
     sort?: string | string[] | SortingOption | SortingOption[];
 }
