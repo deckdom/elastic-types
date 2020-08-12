@@ -1,6 +1,6 @@
 {
     "name": "elastic-types",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "TypeScipt types for ElasticSearch",
     "homepage": "https://github.com/deckdom/elastic-types",
     "license": "MIT",
