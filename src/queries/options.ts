@@ -1,12 +1,3 @@
-export interface ScriptOptions {
-    lang?: string;
-    source?: string;
-    id?: string;
-    params?: {
-        [parameter: string]: any;
-    };
-}
-
 export interface MinimumShouldMatchOption {
     /**
      * Minimum number of clauses that must match for a document to be returned.

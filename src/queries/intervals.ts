@@ -1,4 +1,4 @@
-import { ScriptOptions } from './options';
+import { ScriptObject } from '../common';
 import { SearchQuery } from '../queries';
 
 /**
@@ -166,6 +166,6 @@ export interface FilterInterval {
          * Script used to return matching documents.
          * This script must return a boolean value, `true` or `false`.
          */
-        script?: ScriptOptions;
+        script?: ScriptObject;
     };
 }

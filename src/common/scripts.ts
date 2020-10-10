@@ -18,3 +18,5 @@ export interface StoredScriptObject extends BasicScriptObject {
      */
     id: string;
 }
+
+export type ScriptObject = InlineScriptObject | StoredScriptObject;

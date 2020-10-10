@@ -1,4 +1,5 @@
-import { BoostOption, ScriptOptions } from './options';
+import { ScriptObject } from '../common';
+import { BoostOption } from './options';
 
 /**
  * Returns documents that contain a minimum number of exact terms in a provided field.
@@ -40,5 +41,5 @@ export interface TermsSetQueryOptions extends BoostOption {
      * 
      * @see https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting.html
      */
-    minimum_should_match_script?: ScriptOptions;
+    minimum_should_match_script?: ScriptObject;
 }

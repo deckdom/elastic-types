@@ -1,0 +1,1 @@
+export type FieldType = 'double' | 'long' | 'date' | 'date_nanos' | 'keyword';

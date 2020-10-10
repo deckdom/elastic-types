@@ -1,6 +1,7 @@
 import { SearchQuery } from '../queries';
 import { GeoPosition } from './geo';
 import { InlineScriptObject, StoredScriptObject } from './scripts';
+import { FieldType } from './types';
 
 export interface NestedSortingOption {
     /**
@@ -62,7 +63,7 @@ export interface ValueSortingOption {
      * and can be useful for cross-index search if the sort field is mapped
      * differently on some indices.
      */
-    numeric_type?: 'double' | 'long' | 'date' | 'date_nanos';
+    numeric_type?: FieldType;
     /**
      * Elasticsearch also supports sorting by fields that are inside one
      * or more nested objects. The sorting by nested field support

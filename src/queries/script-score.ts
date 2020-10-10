@@ -1,4 +1,4 @@
-import { InlineScriptObject, StoredScriptObject } from '../common/scripts';
+import { ScriptObject } from '../common/scripts';
 import { SearchQuery } from '../queries';
 
 /**
@@ -17,7 +17,7 @@ export interface ScriptScoreQueryOptions {
     /** Query used to return documents. */
     query: SearchQuery;
     /** Script used to compute the score of documents returned by the query. */
-    script: InlineScriptObject | StoredScriptObject;
+    script: ScriptObject;
     /** Documents with a relevance score lower than this floating point number are excluded from the search results. */
     min_score?: number;
 }

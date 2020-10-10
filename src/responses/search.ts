@@ -40,7 +40,7 @@ export interface SearchResponse<T extends Document> {
          */
         failed: number;
     };
-        /**
+    /**
      * Milliseconds it took Elasticsearch to execute the request.
      * 
      * This value is calculated by measuring the time elapsed between
