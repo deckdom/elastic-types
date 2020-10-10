@@ -1,3 +1,4 @@
+import { Aggregations } from '../common/aggregation';
 import { Collapse } from '../common/collapse';
 import { Highlight } from '../common/highlight';
 import { Rescore } from '../common/rescore';
@@ -314,7 +315,8 @@ export interface SearchRequestBody extends SharedSearchRequestOptions {
     highlight?: Highlight;
     rescore?: Rescore | Rescore[];
     indicies_boost?: IndexBoost | IndexBoost[];
-    aggs?: any;
+    aggs?: Aggregations;
+    aggregations?: Aggregations;
     post_filter?: SearchQuery;
     script_fields?: {
         [key: string]: {
