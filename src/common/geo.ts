@@ -3,7 +3,8 @@ export type GeoPosition = string | [number, number] | {
     lon: number;
 };
 
-export type GeoShapeType = 'point'
+export type GeoShapeType =
+    | 'point'
     | 'linestring'
     | 'polygon'
     | 'multipoint'
@@ -11,7 +12,23 @@ export type GeoShapeType = 'point'
     | 'multipolyon'
     | 'geometrycollection'
     | 'envelope'
-    | 'circle';
+    | 'circle'
+    ;
+
+export type GeoUnit =
+    | 'km'
+    | 'm'
+    | 'mi'
+    | 'in'
+    | 'yd'
+    | 'cm'
+    | 'mm'
+    ;
+
+export type GeoDistanceType =
+    | 'arc'
+    | 'plane'
+    ;
 
 export interface GeoVertex {
     top_left?: GeoPosition;
@@ -36,4 +53,16 @@ export interface ValidationMethodOption {
      * Default is `STRICT`.
      */
     validation_method?: 'IGNORE_MALFORMED' | 'COERCE' |'STRICT';
+}
+
+export type GeoRange = FromRange | ToRange;
+
+export interface FromRange {
+    from: number;
+    to?: number;
+}
+
+export interface ToRange {
+    from?: number;
+    to: number;
 }
